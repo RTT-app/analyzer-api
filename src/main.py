@@ -1,9 +1,11 @@
+"""
 # -*- coding: utf-8 -*-
-"""Tópicos com LDA - Reddit Analyser
+"""
+#Tópicos com LDA - Reddit Analyser
 
 # Modelagem de Tópicos com LDA
 
-Estudos LDA para dados do Reddit.
+#Estudos LDA para dados do Reddit.
 """
 
 #from google.colab import drive
@@ -62,7 +64,9 @@ df['clean_comment'] = df.comment.apply(clean_comment)
 
 df = df[['title','comment','clean_comment','score']]
 
-"""vectorizer"""
+"""
+#vectorizer
+"""
 
 tf_vectorizer = CountVectorizer(stop_words = stop_words)
 vect = tf_vectorizer.fit_transform(df.clean_comment)
@@ -103,3 +107,4 @@ display_topics(doc_topic_matrix,
                df,
                15, 
                10)
+"""
