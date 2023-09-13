@@ -14,11 +14,11 @@ Seria uma boa ideia monitorar os sentimentos de usuarios com analise de sentimen
 
 # - TODO: make schema to get topics
 
-@app.get('/get-topics')
-@spec.validate(resp=Response(), tags=["LDA Model"])
-def get_topics():
+@app.post('/get-topics')
+@spec.validate(body=Request(),resp=Response(),tags=["LDA Model"])
+def gen_topics():
     """
-    - Make LDA pipeline to get the topics.
+    - Make LDA pipeline to gen the text topics.
     """
     topics = lda_pipeline()
     return jsonify(), 200
