@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "analyzer-api"
+version = "0.1.0"
+description = "API that provides the LDA module for analyzing text data."
+authors = ["jordaoa <andrejordao50@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+requests = "2.31.0"
+nltk = "3.8.1"
+pandas = "2.0.1"
+scikit-learn = "1.2.2"
+Flask = "2.3"
+flask-pydantic-spec = "0.4.5"
+python-dotenv = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
